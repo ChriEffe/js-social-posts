@@ -31,9 +31,16 @@ const content = [
 ];
 
 const container = document.getElementById('container');
-
 createPost(content, container);
 
+const button = document.querySelector('.likes__cta');
+const likeCounter = document.querySelector('js-like-counter');
+const likeButton = document.querySelector('.like-button');
+
+button.addEventListener('click', function (event) {
+    event.preventDefault();
+    likeButton.classList.add('like-button--liked');
+})
 
 
 function createPost(array, container) {
